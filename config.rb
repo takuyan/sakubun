@@ -84,6 +84,7 @@ activate :s3_sync do |s3_sync|
   s3_sync.bucket                     = 'sakubun.takuyan.com'
   s3_sync.aws_access_key_id          = ENV['S3_ACCESS']
   s3_sync.aws_secret_access_key      = ENV['S3_SECRET']
+  s3_sync.region                     = 'ap-northeast-1'
   #s3_sync.delete                     = false
   #s3_sync.after_build                = false
   s3_sync.prefer_gzip                = true
