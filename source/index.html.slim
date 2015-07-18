@@ -1,0 +1,76 @@
+.row
+  .col-md-6
+    .form-horizontal
+      .form-group
+        label.control-label.col-md-2 主張
+        .col-md-10
+          textarea.form-control ng-keyup='writing.calc()' msd-elastic=true ng-model="syucho1" placeholder="私は〜〜〜の〜〜〜について〜〜〜と考えます。"
+          p.help-block 私は〜〜〜の〜〜〜について〜〜〜と考えます。
+      .form-group
+        label.control-label.col-md-2 根拠
+        .col-md-10
+          textarea.form-control ng-keyup='writing.calc()' msd-elastic=true ng-model="konkyo" placeholder="なぜなら（　）だからです。"
+          p.help-block なぜなら〜〜〜だからです。
+      .form-group
+        label.control-label.col-md-2 定説
+        .col-md-10
+          textarea.form-control ng-keyup='writing.calc()' msd-elastic=true ng-model="teisetsu" placeholder="一般に〜〜〜とされています。"
+          p.help-block 一般に〜〜〜とされています。
+      .form-group
+        label.control-label.col-md-2 権威付け
+        .col-md-10
+          textarea.form-control ng-keyup='writing.calc()' msd-elastic=true ng-model="keni" placeholder="〜〜〜によれば〜〜〜とされています。"
+          p.help-block 〜〜〜によれば〜〜〜とされています。
+      .form-group
+        label.control-label.col-md-2 具体例
+        .col-md-10
+          textarea.form-control ng-keyup='writing.calc()' msd-elastic=true ng-model="gutairei" placeholder="たとえば〜〜〜です。"
+          p.help-block たとえば〜〜〜です。
+      .form-group
+        label.control-label.col-md-2 事例
+        .col-md-10
+          textarea.form-control ng-keyup='writing.calc()' msd-elastic=true ng-model="jirei" placeholder="かつて〜〜〜ということがありました。"
+          p.help-block かつて〜〜〜ということがありました。
+      .form-group
+        label.control-label.col-md-2 比喩
+        .col-md-10
+          textarea.form-control ng-keyup='writing.calc()' msd-elastic=true ng-model="hiyu" placeholder="まるで〜〜〜のようなものです。"
+          p.help-block まるで〜〜〜のようなものです。
+      .form-group
+        label.control-label.col-md-2 疑問
+        .col-md-10
+          textarea.form-control ng-keyup='writing.calc()' msd-elastic=true ng-model="gimon" placeholder="なるほど（たしかに）〜〜〜という面はあります。"
+          p.help-block なるほど（たしかに）〜〜〜という面はあります。
+      .form-group
+        label.control-label.col-md-2 疑問への反論
+        .col-md-10
+          textarea.form-control ng-keyup='writing.calc()' msd-elastic=true ng-model="hanron" placeholder="しかし〜〜〜ではないでしょうか。"
+          p.help-block しかし〜〜〜ではないでしょうか。
+      .form-group
+        label.control-label.col-md-2 主張の繰り返し
+        .col-md-10
+          textarea.form-control ng-keyup='writing.calc()' msd-elastic=true ng-model="syucho2" placeholder="それゆえ〜〜〜すべきなのです。"
+          p.help-block それゆえ〜〜〜すべきなのです。
+
+  .col-md-6
+    .text-body
+      h1
+        |{{syucho1}}
+      h1
+        |{{konkyo}}
+      h1
+        |{{teisetsu}}
+      h1
+        |{{keni}}
+      h1
+        |{{gutairei}}
+      h1
+        |{{jirei}}
+      h1
+        |{{hiyu}}
+      h1
+        |{{gimon}}
+      h1
+        |{{hanron}}
+      h1
+        |{{syucho2}}
