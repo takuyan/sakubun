@@ -1,3 +1,8 @@
+require 'dotenv'
+Dotenv.load
+
+require 'bootstrap-sass'
+
 ###
 # Compass
 ###
@@ -56,7 +61,7 @@ set :images_dir, 'images'
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
   # activate :minify_javascript
@@ -69,4 +74,21 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+###
+# AWS S3 Setting
+###
+
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                     = 'sakubun.takuyan.com'
+  s3_sync.aws_access_key_id          = ENV['S3_ACCESS']
+  s3_sync.aws_secret_access_key      = ENV['S3_SECRET']
+  #s3_sync.delete                     = false
+  #s3_sync.after_build                = false
+  s3_sync.prefer_gzip                = true
+  s3_sync.path_style                 = true
+  s3_sync.reduced_redundancy_storage = false
+  s3_sync.acl                        = 'public-read'
+  s3_sync.encryption                 = false
 end
