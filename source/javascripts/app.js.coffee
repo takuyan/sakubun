@@ -1,6 +1,7 @@
-angular.module('writingSupporter', [
-  'monospaced.elastic'
-])
+angular
+  .module('writingSupporter', [
+    'monospaced.elastic'
+  ])
   .controller('WritingController', ['$scope', ($scope) ->
     $scope.totalLength = '0文字'
     $scope.syucho1 =  ''
@@ -58,4 +59,4 @@ angular.module('writingSupporter', [
         $scope.hanron.length +
         $scope.syucho2.length
       $scope.totalLength = "#{length}文字"
-])
+  ])
