@@ -1,7 +1,11 @@
 @charset 'utf-8'
 
+$main-font: 'Lato', Arial, 'ヒラギノ角ゴPro W3','Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo , 'ＭＳ Ｐゴシック', sans-serif
+$num-font: 'Droid Sans Mono', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif
+
 body
   padding-top: 80px
+  font-family: $main-font
 
 .navbar-nav
   li a
@@ -13,3 +17,15 @@ body
     margin: 0 0 20px
     line-height: 1.3em
     white-space: pre-wrap
+
+.footer
+  margin: 0
+  background: #eee
+  font-family: $num-font
+  padding: 10px 0
+  text-align: center
+  color: #777
+  ul
+    margin-bottom: 0
+  a
+    color: #777

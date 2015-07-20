@@ -7,9 +7,11 @@ html ng-app='writingSupporter'
     meta name=:author content="Takuya Kato"
     link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
     link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    link href='http://fonts.googleapis.com/css?family=Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'
     = stylesheet_link_tag "normalize", "all"
     link rel="icon" type="image/x-icon" href="/images/favicon.png"
   body class="#{page_classes}" ng-controller='WritingController as writing'
+    = javascript_include_tag 'ga'
     nav.navbar.navbar-default.navbar-fixed-top role=:banner
       .container-fluid
         .navbar-header
@@ -44,8 +46,7 @@ html ng-app='writingSupporter'
             li
               a href="http://www.amazon.co.jp/gp/product/4198630631/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4198630631&linkCode=as2&tag=kattttttttton-22" target='_blank'
                 i.fa.fa-book
-                |[PR]とりあえずの国語力
-
+                |[PR] とりあえずの国語力
             li
               a ng-click='writing.reset()'
                 .fa.fa-refresh
@@ -53,6 +54,18 @@ html ng-app='writingSupporter'
 
     .container-fluid
       == yield
+
+    .footer
+      ul.list-inline
+        li
+          |&copy; #{Time.now.year}
+        li
+          |created by 
+          a href='https://twitter.com/katton' target=:_blank
+            |@katton
+        li
+          a href='http://takuyan.com' target=:_blank
+            |takuyan.com
+
     script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"
-    = javascript_include_tag  "elastic", "app", 'ga'
-    img src="http://ir-jp.amazon-adsystem.com/e/ir?t=kattttttttton-22&l=as2&o=9&a=4198630631" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"
+    = javascript_include_tag  "elastic", "app"
